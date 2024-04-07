@@ -194,7 +194,7 @@ John Doe
 
 这表示：
 
-* 变量 `items_t` 是一个 `tuple`，其中的每个元素都是 `int` 类型。
+* 变量 `items_t` 是一个 `tuple`，其中的前两个元素都是 `int` 类型, 最后一个元素是 `str` 类型。
 * 变量 `items_s` 是一个 `set`，其中的每个元素都是 `bytes` 类型。
 
 #### 字典
@@ -237,7 +237,7 @@ John Doe
 
 ## Pydantic 模型
 
-<a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> 是一个用来用来执行数据校验的 Python 库。
+<a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a> 是一个用来用来执行数据校验的 Python 库。
 
 你可以将数据的"结构"声明为具有属性的类。
 
@@ -254,7 +254,7 @@ John Doe
 ```
 
 !!! info
-    想进一步了解 <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic，请阅读其文档</a>.
+    想进一步了解 <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic，请阅读其文档</a>.
 
 整个 **FastAPI** 建立在 Pydantic 的基础之上。
 

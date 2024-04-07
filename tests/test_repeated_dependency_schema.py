@@ -4,7 +4,7 @@ from fastapi.testclient import TestClient
 app = FastAPI()
 
 
-def get_header(*, someheader: str = Header(...)):
+def get_header(*, someheader: str = Header()):
     return someheader
 
 
@@ -50,7 +50,7 @@ schema = {
         }
     },
     "info": {"title": "FastAPI", "version": "0.1.0"},
-    "openapi": "3.0.2",
+    "openapi": "3.1.0",
     "paths": {
         "/": {
             "get": {

@@ -6,7 +6,7 @@ O corpo da **requisição** é a informação enviada pelo cliente para sua API.
 
 Sua API quase sempre irá enviar um corpo na **resposta**. Mas os clientes não necessariamente precisam enviar um corpo em toda **requisição**.
 
-Para declarar um corpo da **requisição**, você utiliza os modelos do <a href="https://pydantic-docs.helpmanual.io/" class="external-link" target="_blank">Pydantic</a> com todos os seus poderes e benefícios.
+Para declarar um corpo da **requisição**, você utiliza os modelos do <a href="https://docs.pydantic.dev/" class="external-link" target="_blank">Pydantic</a> com todos os seus poderes e benefícios.
 
 !!! info "Informação"
     Para enviar dados, você deve usar utilizar um dos métodos: `POST` (Mais comum), `PUT`, `DELETE` ou `PATCH`.
@@ -158,7 +158,7 @@ Os parâmetros da função serão reconhecidos conforme abaixo:
 !!! note "Observação"
     O FastAPI saberá que o valor de `q` não é obrigatório por causa do valor padrão `= None`.
 
-    O `Optional` em `Optional[str]` não é utilizado pelo FastAPI, mas permite ao seu editor de texto lhe dar um suporte melhor e detectar erros.
+    O `Union` em `Union[str, None]` não é utilizado pelo FastAPI, mas permite ao seu editor de texto lhe dar um suporte melhor e detectar erros.
 
 ## Sem o Pydantic
 

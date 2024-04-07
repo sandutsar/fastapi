@@ -64,7 +64,7 @@ http://127.0.0.1:8000/items/?skip=20
 
 同様に、デフォルト値を `None` とすることで、オプショナルなクエリパラメータを宣言できます:
 
-```Python hl_lines="7"
+```Python hl_lines="9"
 {!../../../docs_src/query_params/tutorial002.py!}
 ```
 
@@ -73,16 +73,11 @@ http://127.0.0.1:8000/items/?skip=20
 !!! check "確認"
     パスパラメータ `item_id` はパスパラメータであり、`q` はそれとは違ってクエリパラメータであると判別できるほど**FastAPI** が賢いということにも注意してください。
 
-!!! note "備考"
-    FastAPIは、`= None`があるおかげで、`q`がオプショナルだとわかります。
-
-    `Optional[str]` の`Optional` はFastAPIでは使用されていません（FastAPIは`str`の部分のみ使用します）。しかし、`Optional[str]` はエディタがコードのエラーを見つけるのを助けてくれます。
-
 ## クエリパラメータの型変換
 
 `bool` 型も宣言できます。これは以下の様に変換されます:
 
-```Python hl_lines="7"
+```Python hl_lines="9"
 {!../../../docs_src/query_params/tutorial003.py!}
 ```
 
@@ -126,7 +121,7 @@ http://127.0.0.1:8000/items/foo?short=yes
 
 名前で判別されます:
 
-```Python hl_lines="6  8"
+```Python hl_lines="8  10"
 {!../../../docs_src/query_params/tutorial004.py!}
 ```
 
@@ -184,7 +179,7 @@ http://127.0.0.1:8000/items/foo-item?needy=sooooneedy
 
 そして当然、あるパラメータを必須に、別のパラメータにデフォルト値を設定し、また別のパラメータをオプショナルにできます:
 
-```Python hl_lines="7"
+```Python hl_lines="10"
 {!../../../docs_src/query_params/tutorial006.py!}
 ```
 

@@ -205,10 +205,6 @@ Cette "attente" 🕙 se mesure en microsecondes, mais tout de même, en cumulé 
 
 C'est pourquoi il est logique d'utiliser du code asynchrone ⏸🔀⏯ pour des APIs web.
 
-La plupart des frameworks Python existants (y compris Flask et Django) ont été créés avant que les nouvelles fonctionnalités asynchrones de Python n'existent. Donc, les façons dont ils peuvent être déployés supportent l'exécution parallèle  et une ancienne forme d'exécution asynchrone qui n'est pas aussi puissante que les nouvelles fonctionnalités de Python.
-
-Et cela, bien que les spécifications principales du web asynchrone en Python (ou ASGI) ont été développées chez Django, pour ajouter le support des WebSockets.
-
 Ce type d'asynchronicité est ce qui a rendu NodeJS populaire (bien que NodeJS ne soit pas parallèle) et c'est la force du Go en tant que langage de programmation.
 
 Et c'est le même niveau de performance que celui obtenu avec **FastAPI**.
@@ -254,7 +250,7 @@ Par exemple :
 
 ### Concurrence + Parallélisme : Web + Machine Learning
 
-Avec **FastAPI** vous pouvez bénéficier de la concurrence qui est très courante en developement web (c'est l'attrait principal de NodeJS).
+Avec **FastAPI** vous pouvez bénéficier de la concurrence qui est très courante en développement web (c'est l'attrait principal de NodeJS).
 
 Mais vous pouvez aussi profiter du parallélisme et multiprocessing afin de gérer des charges **CPU bound** qui sont récurrentes dans les systèmes de *Machine Learning*.
 
@@ -369,7 +365,7 @@ Quand vous déclarez une *fonction de chemin* avec un `def` normal et non `async
 
 Si vous venez d'un autre framework asynchrone qui ne fonctionne pas comme de la façon décrite ci-dessus et que vous êtes habitués à définir des *fonctions de chemin* basiques avec un simple `def` pour un faible gain de performance (environ 100 nanosecondes), veuillez noter que dans **FastAPI**, l'effet serait plutôt contraire. Dans ces cas-là, il vaut mieux utiliser `async def` à moins que votre *fonction de chemin* utilise du code qui effectue des opérations <abbr title="Input/Output ou Entrées et Sorties ">I/O</abbr> bloquantes.
 
-Au final, dans les deux situations, il est fort probable que **FastAPI** soit tout de même [plus rapide](/#performance){.internal-link target=_blank} que (ou au moins de vitesse égale à) votre framework précédent.
+Au final, dans les deux situations, il est fort probable que **FastAPI** soit tout de même [plus rapide](index.md#performance){.internal-link target=_blank} que (ou au moins de vitesse égale à) votre framework précédent.
 
 ### Dépendances
 
